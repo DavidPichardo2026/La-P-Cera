@@ -31,44 +31,39 @@
     <h1 class="site-title">La P-cera</h1>
     <p class="site-tagline">Muestra poética · David Pichardo</p>
 
-    <!-- Koi SVG animado (fondo transparente) -->
+    <!-- Koi acuarela -->
     <div class="koi-wrapper" aria-hidden="true">
-      <svg class="koi" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+      <svg class="koi" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <radialGradient id="kg1" cx="40%" cy="40%" r="60%">
-            <stop offset="0%" stop-color="#f5e6d0"/>
-            <stop offset="100%" stop-color="#d4b896"/>
-          </radialGradient>
-          <radialGradient id="kg2" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#e8624a"/>
-            <stop offset="100%" stop-color="#c04428"/>
-          </radialGradient>
+          <filter id="watercolor">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="4"/>
+            <feGaussianBlur stdDeviation="0.4"/>
+          </filter>
+          <linearGradient id="koiBody" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f5e8d5"/>
+            <stop offset="100%" stop-color="#d7b58c"/>
+          </linearGradient>
+          <linearGradient id="koiOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff9a62"/>
+            <stop offset="100%" stop-color="#d65a31"/>
+          </linearGradient>
         </defs>
-        <!-- Cola abanico -->
-        <path d="M158 40 Q182 18 200 8 Q190 40 200 72 Q182 62 158 40Z" fill="url(#kg2)" opacity=".8"/>
-        <path d="M158 40 Q176 26 190 20 Q184 40 190 60 Q176 54 158 40Z" fill="#f0a060" opacity=".45"/>
-        <!-- Cuerpo forma de pez real -->
-        <path d="M22 40 Q30 18 80 20 Q130 18 158 40 Q130 62 80 60 Q30 62 22 40Z" fill="url(#kg1)"/>
-        <!-- Mancha naranja grande dorsal -->
-        <path d="M55 22 Q90 18 115 26 Q105 38 75 36 Q58 34 55 22Z" fill="url(#kg2)" opacity=".85"/>
-        <!-- Mancha naranja ventral -->
-        <path d="M80 54 Q110 52 130 44 Q128 56 105 60 Q85 62 80 54Z" fill="url(#kg2)" opacity=".7"/>
-        <!-- Mancha negra -->
-        <ellipse cx="60" cy="46" rx="14" ry="9" fill="#2a1a0a" opacity=".65"/>
-        <!-- Aleta dorsal -->
-        <path d="M75 20 Q92 6 112 18" fill="none" stroke="#c04428" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
-        <path d="M75 20 Q92 10 112 18 Q100 20 88 21 Q80 21 75 20Z" fill="#e8624a" opacity=".5"/>
-        <!-- Aleta pectoral -->
-        <path d="M65 52 Q52 66 38 62 Q50 56 65 52Z" fill="#d4a070" opacity=".65"/>
-        <!-- Brillo en el lomo -->
-        <path d="M60 26 Q100 20 130 30" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".2"/>
-        <!-- Ojo -->
-        <circle cx="28" cy="40" r="5.5" fill="#1a1008"/>
-        <circle cx="28" cy="40" r="3" fill="#3a2010"/>
-        <circle cx="30" cy="38" r="1.4" fill="white" opacity=".85"/>
-        <!-- Bigotes -->
-        <line x1="23" y1="39" x2="8"  y2="33" stroke="#c8a060" stroke-width="1.1" stroke-linecap="round" opacity=".8"/>
-        <line x1="23" y1="42" x2="8"  y2="48" stroke="#c8a060" stroke-width="1.1" stroke-linecap="round" opacity=".8"/>
+        <!-- cola -->
+        <path d="M380 110 Q440 50 490 20 Q460 110 490 200 Q440 170 380 110Z" fill="url(#koiOrange)" opacity=".75" filter="url(#watercolor)"/>
+        <!-- cuerpo -->
+        <path d="M60 110 Q100 40 220 55 Q340 70 380 110 Q340 150 220 165 Q100 180 60 110Z" fill="url(#koiBody)" filter="url(#watercolor)"/>
+        <!-- manchas -->
+        <ellipse cx="190" cy="90" rx="70" ry="28" fill="url(#koiOrange)" opacity=".75" filter="url(#watercolor)"/>
+        <ellipse cx="260" cy="135" rx="55" ry="20" fill="#2a1209" opacity=".35" filter="url(#watercolor)"/>
+        <!-- aleta dorsal -->
+        <path d="M210 70 Q250 20 290 60" stroke="#d65a31" stroke-width="5" stroke-linecap="round" opacity=".4" fill="none"/>
+        <!-- ojo -->
+        <circle cx="90" cy="110" r="7" fill="#1a1008"/>
+        <circle cx="93" cy="107" r="2" fill="white" opacity=".8"/>
+        <!-- bigotes -->
+        <line x1="65" y1="107" x2="38" y2="98" stroke="#c8a060" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+        <line x1="65" y1="114" x2="38" y2="123" stroke="#c8a060" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
       </svg>
     </div>
 
@@ -107,37 +102,38 @@
         <img src="assets/Tu-boca-es-mi-boca.jpeg" alt="tu boca es mi boca" loading="lazy">
       </div>
       <div class="fotopoema">
-        <img src="assets/tus-lagrimas.jpeg" alt="tus lágrimas son mis lágrimas" loading="lazy">
+        <img src="assets/tus-lagrimas.jpeg" alt="tus lágrimas son mis lágrimas" loading="lazy" onerror="this.src='assets/WhatsApp Image 2026-06-08 at 7.03.17 PM (2).jpeg'">
       </div>
     </div>
   </section>
 
-  <!-- Ballena decorativa (SVG inline) -->
+  <!-- Ballena acuarela -->
   <div class="whale-section" aria-hidden="true">
-    <svg width="220" height="90" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cuerpo ballena -->
-      <ellipse cx="100" cy="48" rx="80" ry="32" fill="url(#whale-body)"/>
-      <!-- Cola -->
-      <path d="M178 48 Q195 28 210 18 Q198 48 210 78 Q195 68 178 48Z" fill="url(#whale-tail)"/>
-      <!-- Panza -->
-      <ellipse cx="85" cy="58" rx="55" ry="15" fill="#a5f3fc" opacity=".15"/>
-      <!-- Aleta pectoral -->
-      <path d="M80 72 Q60 90 40 82 Q60 70 80 72Z" fill="#0e7490" opacity=".7"/>
-      <!-- Ojo -->
-      <circle cx="30" cy="44" r="6" fill="#04111f"/>
-      <circle cx="32" cy="42" r="2" fill="#a5f3fc" opacity=".8"/>
-      <!-- Chorro -->
-      <path d="M22 38 Q18 22 24 8 Q28 22 34 38" stroke="#a5f3fc" stroke-width="1.5" fill="none" opacity=".5"/>
+    <svg class="whale-watercolor" viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="whale-body" x1="20" y1="20" x2="180" y2="80" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stop-color="#0a4a6e"/>
-          <stop offset="100%" stop-color="#062d47"/>
-        </linearGradient>
-        <linearGradient id="whale-tail" x1="178" y1="18" x2="210" y2="78" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"  stop-color="#0e7490" stop-opacity=".9"/>
-          <stop offset="100%" stop-color="#14b8a6" stop-opacity=".3"/>
+        <filter id="whaleTexture">
+          <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="6"/>
+          <feGaussianBlur stdDeviation="0.5"/>
+        </filter>
+        <linearGradient id="whaleBody" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0f3d5a"/>
+          <stop offset="100%" stop-color="#041b2d"/>
         </linearGradient>
       </defs>
+      <!-- cola -->
+      <path d="M560 130 Q630 70 690 30 Q660 130 690 230 Q630 190 560 130Z" fill="#0a4969" opacity=".7" filter="url(#whaleTexture)"/>
+      <!-- cuerpo -->
+      <path d="M90 130 Q170 40 380 55 Q520 70 560 130 Q520 190 380 205 Q170 220 90 130Z" fill="url(#whaleBody)" filter="url(#whaleTexture)"/>
+      <!-- panza -->
+      <ellipse cx="320" cy="165" rx="180" ry="38" fill="#a5f3fc" opacity=".08"/>
+      <!-- aleta -->
+      <path d="M290 180 Q240 240 180 220 Q240 180 290 180Z" fill="#0b567d" opacity=".6" filter="url(#whaleTexture)"/>
+      <!-- ojo -->
+      <circle cx="140" cy="120" r="7" fill="#021018"/>
+      <circle cx="143" cy="117" r="2" fill="#c9f5ff" opacity=".8"/>
+      <!-- brillo -->
+      <path d="M180 90 Q340 55 480 95" stroke="white" stroke-width="5" opacity=".06" stroke-linecap="round" fill="none"/>
     </svg>
   </div>
 

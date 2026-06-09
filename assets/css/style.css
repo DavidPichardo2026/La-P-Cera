@@ -154,8 +154,10 @@ nav a:hover { color: var(--foam); }
 }
 
 @keyframes swim {
-  0%   { transform: translateX(-50px) rotate(-2deg); }
-  100% { transform: translateX(50px)  rotate(2deg); }
+  0%   { transform: translateX(-60px) scaleX(-1) rotate(2deg); }
+  48%  { transform: translateX(60px)  scaleX(-1) rotate(-2deg); }
+  50%  { transform: translateX(60px)  scaleX(1)  rotate(-2deg); }
+  100% { transform: translateX(-60px) scaleX(1)  rotate(2deg); }
 }
 
 /* ── SECCIÓN AUTOR ── */
@@ -384,12 +386,16 @@ nav a:hover { color: var(--foam); }
   background: var(--ocean);
 }
 
-/* ── WHALE decorativa ── */
+/* ── WHALE acuarela ── */
 .whale-section {
   text-align: center;
   padding: 3rem 0;
-  opacity: .25;
+  opacity: .3;
   pointer-events: none;
+}
+.whale-watercolor {
+  width: min(500px, 80vw);
+  height: auto;
 }
 
 /* ── FOOTER ── */
