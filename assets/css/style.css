@@ -136,8 +136,20 @@ nav a:hover { color: var(--foam); }
 }
 
 .koi {
+  height: 90px;
+  width: auto;
   animation: swim 8s ease-in-out infinite alternate;
   transform-origin: center;
+}
+
+.author-origin {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: .5rem;
 }
 
 @keyframes swim {

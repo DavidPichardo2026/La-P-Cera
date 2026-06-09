@@ -135,7 +135,11 @@ function renderAuthor(author) {
   const imgEl  = document.getElementById('author-img');
 
   if (nameEl) nameEl.textContent = author.name;
-  if (bioEl)  bioEl.textContent  = author.bio;
+  if (bioEl) {
+    bioEl.innerHTML = author.origin
+      ? `<span class="author-origin">${author.origin}</span>${author.bio}`
+      : author.bio;
+  }
 
   if (imgEl && author.photo) {
     const img = document.createElement('img');

@@ -1,8 +1,9 @@
 {
   "author": {
-    "name": "David Pichardo",
-    "bio": "Poeta. Palabras como agua, como raíz, como marea que no avisa cuando llega.",
-    "photo": "assets/img/autor.jpg"
+    "name": "David Gutiérrez Pichardo",
+    "origin": "Nezahualcóyotl, 1999",
+    "bio": "Estudié la Licenciatura en Lengua y Literatura Modernas Francesas y la Licenciatura en Pedagogía. Me apasiona la poesía de lo cotidiano y amo los animales y las plantas. Soy editor de la revista de cine y literatura Interlatencias y he publicado en las revistas Iguales, Estrépito, Granuja, Periódico Poético, Cardenal, Página Salmón y Punto de partida, entre otras. Participé en el XI Encuentro Nacional de Escritores Jóvenes Jesús Gardea. Desde 2020 me dedico a la docencia e imparto talleres sobre poesía y literatura contemporánea. Escribo porque creo que las ideas mueven al mundo.",
+    "photo": "assets/autor.jpeg"
   },
   "poems": [
     {
