@@ -31,9 +31,39 @@
     <h1 class="site-title">La P-cera</h1>
     <p class="site-tagline">Muestra poética · David Pichardo</p>
 
-    <!-- Koi GIF animado -->
+    <!-- Koi SVG animado (fondo transparente) -->
     <div class="koi-wrapper" aria-hidden="true">
-      <img class="koi" src="assets/koi.gif" alt="pez koi" />
+      <svg class="koi" viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- Cola -->
+        <g class="koi-cola">
+          <path d="M155 45 Q175 25 188 12 Q178 45 188 78 Q175 65 155 45Z" fill="#e05a2b" opacity=".85"/>
+          <path d="M155 45 Q170 32 180 22 Q173 45 180 68 Q170 58 155 45Z" fill="#f0a060" opacity=".5"/>
+        </g>
+        <!-- Cuerpo principal -->
+        <ellipse cx="90" cy="45" rx="68" ry="26" fill="white" stroke="#ddd" stroke-width=".5"/>
+        <!-- Manchas naranja/negro características del koi -->
+        <ellipse cx="70" cy="38" rx="22" ry="14" fill="#e05a2b" opacity=".9"/>
+        <ellipse cx="105" cy="50" rx="18" ry="12" fill="#e05a2b" opacity=".85"/>
+        <ellipse cx="55" cy="52" rx="12" ry="9" fill="#1a1a1a" opacity=".75"/>
+        <ellipse cx="118" cy="38" rx="10" ry="8" fill="#1a1a1a" opacity=".6"/>
+        <!-- Brillo -->
+        <ellipse cx="80" cy="36" rx="28" ry="10" fill="white" opacity=".18"/>
+        <!-- Aleta dorsal -->
+        <path d="M72 19 Q85 8 100 17 Q90 19 80 20Z" fill="#e05a2b" opacity=".7"/>
+        <!-- Aleta pectoral -->
+        <path d="M60 58 Q45 72 32 67 Q48 60 60 58Z" fill="#f0a060" opacity=".6"/>
+        <!-- Ojo -->
+        <circle cx="26" cy="42" r="6" fill="#111"/>
+        <circle cx="26" cy="42" r="3.5" fill="#333"/>
+        <circle cx="28" cy="40" r="1.5" fill="white" opacity=".9"/>
+        <!-- Bigotes -->
+        <line x1="22" y1="43" x2="10" y2="38" stroke="#c8a060" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="22" y1="46" x2="10" y2="51" stroke="#c8a060" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- Escamas (líneas sutiles) -->
+        <path d="M50 30 Q58 45 50 60" fill="none" stroke="white" stroke-width=".6" opacity=".3"/>
+        <path d="M70 22 Q80 45 70 68" fill="none" stroke="white" stroke-width=".6" opacity=".3"/>
+        <path d="M90 20 Q102 45 90 70" fill="none" stroke="white" stroke-width=".6" opacity=".3"/>
+      </svg>
     </div>
 
     <nav>
