@@ -1,4 +1,4 @@
-/* ── La P-cera · Estilos principales ── */
+﻿/* ── La P-cera · Estilos principales ── */
 
 :root {
   --deep:    #04111f;
@@ -127,37 +127,34 @@ nav a {
 nav a:hover { color: var(--foam); }
 
 /* ── KOI SVG animado ── */
-.koi-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-  height: 120px;
+/* -- FISH TANK (emojis animados) -- */
+.fish-tank {
+  position: relative;
+  height: 80px;
+  margin: 1.5rem 0;
   overflow: hidden;
+  width: 100%;
 }
 
-.koi {
-  height: 110px;
-  width: auto;
-  mix-blend-mode: screen;
-  animation: swim 10s ease-in-out infinite alternate;
-  transform-origin: center;
+.fish {
+  position: absolute;
+  font-size: 1.8rem;
+  display: inline-block;
+  animation: swim-fish linear infinite;
 }
 
-.author-origin {
-  display: block;
-  font-family: var(--font-ui);
-  font-size: .78rem;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: .5rem;
-}
+.f1 { animation-duration: 12s; animation-delay:   0s; top: 15%; }
+.f2 { animation-duration: 17s; animation-delay:  -5s; top: 50%; font-size: 1.4rem; }
+.f3 { animation-duration: 14s; animation-delay:  -9s; top: 70%; font-size: 1.6rem; }
+.f4 { animation-duration: 19s; animation-delay:  -3s; top: 30%; font-size: 1.3rem; }
+.f5 { animation-duration: 22s; animation-delay: -12s; top: 55%; font-size: 1.5rem; }
 
-@keyframes swim {
-  0%   { transform: translateX(-60px) scaleX(-1) rotate(2deg); }
-  48%  { transform: translateX(60px)  scaleX(-1) rotate(-2deg); }
-  50%  { transform: translateX(60px)  scaleX(1)  rotate(-2deg); }
-  100% { transform: translateX(-60px) scaleX(1)  rotate(2deg); }
+@keyframes swim-fish {
+  0%   { left: 108%; transform: scaleX(1);  }
+  49%  { left:  -8%; transform: scaleX(1);  }
+  50%  { left:  -8%; transform: scaleX(-1); }
+  99%  { left: 108%; transform: scaleX(-1); }
+  100% { left: 108%; transform: scaleX(1);  }
 }
 
 /* ── SECCIÓN AUTOR ── */
@@ -223,8 +220,8 @@ nav a:hover { color: var(--foam); }
 .fotopoema img {
   width: 100%;
   display: block;
-  object-fit: cover;
-  max-height: 420px;
+  object-fit: contain;
+
 }
 
 .author-name {
