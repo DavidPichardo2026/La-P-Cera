@@ -131,14 +131,15 @@ nav a:hover { color: var(--foam); }
   display: flex;
   justify-content: center;
   margin: 2rem 0;
-  height: 90px;
+  height: 120px;
   overflow: hidden;
 }
 
 .koi {
-  height: 90px;
+  height: 110px;
   width: auto;
-  animation: swim 8s ease-in-out infinite alternate;
+  mix-blend-mode: multiply;
+  animation: swim 10s ease-in-out infinite alternate;
   transform-origin: center;
 }
 
@@ -153,10 +154,8 @@ nav a:hover { color: var(--foam); }
 }
 
 @keyframes swim {
-  0%   { transform: translateX(-60px) rotate(-4deg) scaleX(1); }
-  48%  { transform: translateX(60px)  rotate(4deg)  scaleX(1); }
-  50%  { transform: translateX(60px)  rotate(4deg)  scaleX(-1); }
-  100% { transform: translateX(-60px) rotate(-4deg) scaleX(-1); }
+  0%   { transform: translateX(-50px) rotate(-2deg); }
+  100% { transform: translateX(50px)  rotate(2deg); }
 }
 
 /* ── SECCIÓN AUTOR ── */
@@ -170,25 +169,60 @@ nav a:hover { color: var(--foam); }
 }
 
 .author-photo {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top;
   border: 2px solid var(--teal);
-  box-shadow: 0 0 24px #14b8a640;
+  box-shadow: 0 0 32px #14b8a640;
 }
 
 .author-photo-placeholder {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 2px solid var(--teal);
-  box-shadow: 0 0 24px #14b8a640;
+  box-shadow: 0 0 32px #14b8a640;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--ocean);
   font-size: 2.5rem;
+}
+
+/* ── FOTO-POESÍA ── */
+#foto-poesia {
+  padding: 3rem 0;
+  border-top: 1px solid #14b8a620;
+}
+
+.fotpoesia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.fotopoema {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #14b8a625;
+  transition: transform .3s, box-shadow .3s;
+  cursor: zoom-in;
+}
+
+.fotopoema:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px #14b8a630;
+}
+
+.fotopoema img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 420px;
 }
 
 .author-name {
