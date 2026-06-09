@@ -1,0 +1,23 @@
+{
+  "author": {
+    "name": "David Pichardo",
+    "bio": "Poeta. Palabras como agua, como raíz, como marea que no avisa cuando llega.",
+    "photo": "assets/img/autor.jpg"
+  },
+  "poems": [
+    {
+      "id": "culpa-poesia",
+      "title": "¿De qué tiene culpa la poesía?",
+      "year": "2024",
+      "drive_id": "",
+      "text": "Tiene culpa de ser niñx\nchicle en boca\npiedra en mano\nfrente a la ventana de lo verosímil\n\nCulpa de ser gato\ndormido sobre un cactus,\nvuelve siempre los resquicios más inhabitables\nen refugio suave\ndonde tomar una siesta para seguir maullando\n\nLa poesía es un rizoma,\ncada acción noble tiene como raíz un poema\nen cuanto toda creación tiene fundamentos amorosos\n\nEl acto puro del lenguaje:\nregar una planta\nmirar un insecto\nsonreír a la noche,\nya sabes, esa obstinación por hacer crecer las cosas\npara crecer unx mismx\n\nNo sé si logre reconciliarme con todos los poemas que no he escrito,\nes decir, con toda palabra sanadora con la que he dañado\n\nSi la poesía tiene culpa de algo\nes de ser esa acta de bautismo que no autentificamos."
+    },
+    {
+      "id": "inextinguible-noche",
+      "title": "Inextinguible la noche",
+      "year": "2024",
+      "drive_id": "",
+      "text": "Inextinguible la noche\nen que intentamos pelear nuestro destino\n\nhabrías podido hacer brotar ciclamores de los pliegues de mis manos\ny enraizar mis dedos en el calor de tu garganta\n\nsi hubieses querido\n\npero no fuimos en tanto quisimos ser nosotres\nsucede que el tiempo / los golpes\nla soledad / el abandono\n\nera tan frágil la dicha que nos sostenía\n\nera tan frágil la noche que nos sostenía\ny sin embargo\npara mí no ha amanecido"
+    }
+  ]
+}
