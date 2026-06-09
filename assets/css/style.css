@@ -138,7 +138,7 @@ nav a:hover { color: var(--foam); }
 .koi {
   height: 110px;
   width: auto;
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
   animation: swim 10s ease-in-out infinite alternate;
   transform-origin: center;
 }
