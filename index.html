@@ -33,36 +33,42 @@
 
     <!-- Koi SVG animado (fondo transparente) -->
     <div class="koi-wrapper" aria-hidden="true">
-      <svg class="koi" viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- Cola -->
-        <g class="koi-cola">
-          <path d="M155 45 Q175 25 188 12 Q178 45 188 78 Q175 65 155 45Z" fill="#e05a2b" opacity=".85"/>
-          <path d="M155 45 Q170 32 180 22 Q173 45 180 68 Q170 58 155 45Z" fill="#f0a060" opacity=".5"/>
-        </g>
-        <!-- Cuerpo principal -->
-        <ellipse cx="90" cy="45" rx="68" ry="26" fill="white" stroke="#ddd" stroke-width=".5"/>
-        <!-- Manchas naranja/negro características del koi -->
-        <ellipse cx="70" cy="38" rx="22" ry="14" fill="#e05a2b" opacity=".9"/>
-        <ellipse cx="105" cy="50" rx="18" ry="12" fill="#e05a2b" opacity=".85"/>
-        <ellipse cx="55" cy="52" rx="12" ry="9" fill="#1a1a1a" opacity=".75"/>
-        <ellipse cx="118" cy="38" rx="10" ry="8" fill="#1a1a1a" opacity=".6"/>
-        <!-- Brillo -->
-        <ellipse cx="80" cy="36" rx="28" ry="10" fill="white" opacity=".18"/>
+      <svg class="koi" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="kg1" cx="40%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#f5e6d0"/>
+            <stop offset="100%" stop-color="#d4b896"/>
+          </radialGradient>
+          <radialGradient id="kg2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e8624a"/>
+            <stop offset="100%" stop-color="#c04428"/>
+          </radialGradient>
+        </defs>
+        <!-- Cola abanico -->
+        <path d="M158 40 Q182 18 200 8 Q190 40 200 72 Q182 62 158 40Z" fill="url(#kg2)" opacity=".8"/>
+        <path d="M158 40 Q176 26 190 20 Q184 40 190 60 Q176 54 158 40Z" fill="#f0a060" opacity=".45"/>
+        <!-- Cuerpo forma de pez real -->
+        <path d="M22 40 Q30 18 80 20 Q130 18 158 40 Q130 62 80 60 Q30 62 22 40Z" fill="url(#kg1)"/>
+        <!-- Mancha naranja grande dorsal -->
+        <path d="M55 22 Q90 18 115 26 Q105 38 75 36 Q58 34 55 22Z" fill="url(#kg2)" opacity=".85"/>
+        <!-- Mancha naranja ventral -->
+        <path d="M80 54 Q110 52 130 44 Q128 56 105 60 Q85 62 80 54Z" fill="url(#kg2)" opacity=".7"/>
+        <!-- Mancha negra -->
+        <ellipse cx="60" cy="46" rx="14" ry="9" fill="#2a1a0a" opacity=".65"/>
         <!-- Aleta dorsal -->
-        <path d="M72 19 Q85 8 100 17 Q90 19 80 20Z" fill="#e05a2b" opacity=".7"/>
+        <path d="M75 20 Q92 6 112 18" fill="none" stroke="#c04428" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+        <path d="M75 20 Q92 10 112 18 Q100 20 88 21 Q80 21 75 20Z" fill="#e8624a" opacity=".5"/>
         <!-- Aleta pectoral -->
-        <path d="M60 58 Q45 72 32 67 Q48 60 60 58Z" fill="#f0a060" opacity=".6"/>
+        <path d="M65 52 Q52 66 38 62 Q50 56 65 52Z" fill="#d4a070" opacity=".65"/>
+        <!-- Brillo en el lomo -->
+        <path d="M60 26 Q100 20 130 30" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".2"/>
         <!-- Ojo -->
-        <circle cx="26" cy="42" r="6" fill="#111"/>
-        <circle cx="26" cy="42" r="3.5" fill="#333"/>
-        <circle cx="28" cy="40" r="1.5" fill="white" opacity=".9"/>
+        <circle cx="28" cy="40" r="5.5" fill="#1a1008"/>
+        <circle cx="28" cy="40" r="3" fill="#3a2010"/>
+        <circle cx="30" cy="38" r="1.4" fill="white" opacity=".85"/>
         <!-- Bigotes -->
-        <line x1="22" y1="43" x2="10" y2="38" stroke="#c8a060" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="22" y1="46" x2="10" y2="51" stroke="#c8a060" stroke-width="1.2" stroke-linecap="round"/>
-        <!-- Escamas (líneas sutiles) -->
-        <path d="M50 30 Q58 45 50 60" fill="none" stroke="white" stroke-width=".6" opacity=".3"/>
-        <path d="M70 22 Q80 45 70 68" fill="none" stroke="white" stroke-width=".6" opacity=".3"/>
-        <path d="M90 20 Q102 45 90 70" fill="none" stroke="white" stroke-width=".6" opacity=".3"/>
+        <line x1="23" y1="39" x2="8"  y2="33" stroke="#c8a060" stroke-width="1.1" stroke-linecap="round" opacity=".8"/>
+        <line x1="23" y1="42" x2="8"  y2="48" stroke="#c8a060" stroke-width="1.1" stroke-linecap="round" opacity=".8"/>
       </svg>
     </div>
 
