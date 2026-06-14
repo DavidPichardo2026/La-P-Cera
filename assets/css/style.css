@@ -383,6 +383,73 @@ nav a:hover { color: var(--foam); }
   background: var(--ocean);
 }
 
+/* ── LIBRO DESCARGABLE ── */
+#libro {
+  padding: 3rem 0;
+  border-top: 1px solid #14b8a620;
+}
+
+.libro-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(135deg, #062d4780, #04111f90);
+  border: 1px solid #14b8a625;
+  border-radius: 16px;
+  padding: 2rem 2.4rem;
+  margin-top: 2rem;
+}
+
+.libro-titulo {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--foam);
+  letter-spacing: .04em;
+}
+
+.libro-desc {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-top: .4rem;
+}
+
+.libro-año {
+  font-family: var(--font-ui);
+  font-size: .75rem;
+  color: var(--teal);
+  margin-top: .5rem;
+  letter-spacing: .15em;
+}
+
+.libro-btn {
+  display: inline-block;
+  white-space: nowrap;
+  background: transparent;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-family: var(--font-ui);
+  font-size: .82rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .7rem 1.5rem;
+  border-radius: 8px;
+  transition: background .25s, color .25s;
+}
+
+.libro-btn:hover {
+  background: var(--teal);
+  color: var(--deep);
+}
+
+@media (max-width: 580px) {
+  .libro-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* ── WHALE acuarela ── */
 .whale-section {
   text-align: center;
